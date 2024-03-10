@@ -4,26 +4,25 @@
 
 int Dictionary::FindIndex(std::string idx) const
 {
-    if(_vect.size()>0)
+    if (_vect.size() > 0)
     {
-        for(int i=0; i<_indices.size(); i++)
+        for (int i = 0; i < _indices.size(); i++)
         {
-            if(_indices[i]==idx)
+            if (_indices[i] == idx)
             {
                 return i;
             }
         }
     }
-
     return -1;
 }
 
 void Dictionary::add(std::string idx, int value)
 {
     int i = FindIndex(idx);
-    if(i != -1)
+    if (i != -1)
     {
-        // znaleziono indeks 
+        // znaleziono indeks
         _vect[i] = value;
     }
     else
@@ -37,7 +36,7 @@ void Dictionary::add(std::string idx, int value)
 void Dictionary::remove(std::string idx)
 {
     int i = FindIndex(idx);
-    if(i != -1)
+    if (i != -1)
     {
         // jesli znalezioni indeks to zerujemy wartosc
         // co jest interpretowane jako usuniecie jej ze slownika
@@ -45,12 +44,12 @@ void Dictionary::remove(std::string idx)
     }
 }
 
-const int& Dictionary::operator[](std::string idx) const
+const int &Dictionary::operator[](std::string idx) const
 {
     int i = FindIndex(idx);
-    if(i != -1)
+    if (i != -1)
     {
-        // znaleziono indeks 
+        // znaleziono indeks
         return _vect[i];
     }
     else
@@ -60,7 +59,7 @@ const int& Dictionary::operator[](std::string idx) const
     }
 }
 
-Dictionary&& Dictionary::move()
+Dictionary &&Dictionary::move()
 {
     return std::move(*this);
 }
@@ -73,6 +72,6 @@ Dictionary::Dictionary(Dictionary &&other)
 
 Dictionary::Dictionary()
 {
-    // ustawiam domyslna wartosc dla nie znalezionego elementu na 0
+    // ustawiam domyslna wartosc dla nieznalezionego elementu na 0
     _defaultValue = 0;
 }
