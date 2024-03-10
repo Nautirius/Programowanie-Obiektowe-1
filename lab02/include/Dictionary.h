@@ -1,5 +1,6 @@
-#ifndef DICT
-#define DICT
+#ifndef _DICT_
+#define _DICT_
+
 #include <string>
 #include <vector>
 
@@ -9,10 +10,9 @@ Klasa zawierajaca implementacje slownika
 class Dictionary
 {
 public:
-
     /** @brief Konstruktor domyslny
     W tym konstruktorze zdecydowalem sie zainicjalizowac domyslna wartosc
-    tak, by mozna bylo zwrocic wartosc dla indeksu string, 
+    tak, by mozna bylo zwrocic wartosc dla indeksu string,
     ktory nie istnieje w slowniku
     */
     Dictionary();
@@ -31,19 +31,19 @@ public:
     void remove(std::string idx);
 
     /**
-    Przeladowany operator subskrybcji tablicy 
+    Przeladowany operator subskrybcji tablicy
     @param [in] idx string index wartosci do odczytania
     @return zwraca const referencje do wartosci ze slownika
     Const bo w zadaniu nie ma przykladu zmiany wartosci w slowniku
     poza uzyciem funkcji Remove
     */
-    const int& operator[](std::string idx) const;
+    const int &operator[](std::string idx) const;
 
     /**
     Funkcja implementujaca semantyke przenoszenia
     @return zwraca rvalue referencje do slownika
     */
-    Dictionary&& move();
+    Dictionary &&move();
 
     /**
     Konstruktor przenoszacy
