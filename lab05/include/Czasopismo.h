@@ -2,7 +2,7 @@
 
 #include "IKsiazka.h"
 
-/** Klasa reperzentująca czasopismo */
+/** Klasa reprezentująca czasopismo */
 class Czasopismo : public IKsiazka
 {
 public:

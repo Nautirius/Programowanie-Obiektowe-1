@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1.0)
-project (books)
+project (biblioteka)
 
 # prevent for in-source building
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
@@ -21,4 +21,4 @@ include_directories(${INCLUDES})
 
 file(GLOB SOURCES "${PROJECT_SOURCE_DIR}/src/*.cpp")
 
-add_executable(${PROJECT_NAME} main.cpp ${SOURCES})
+add_executable(${PROJECT_NAME} Main.cpp ${SOURCES})

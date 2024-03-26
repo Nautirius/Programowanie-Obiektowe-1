@@ -2,7 +2,7 @@
 
 #include "IKsiazka.h"
 
-/** Klasa reperzentująca książkę */
+/** Klasa reprezentująca książkę */
 class Ksiazka : public IKsiazka
 {
 public:

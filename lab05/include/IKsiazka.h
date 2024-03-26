@@ -2,10 +2,13 @@
 
 #include <string>
 
-/** Klasa będąca interfacem reperzentującym książkę */
+/** Klasa będąca interfacem reprezentującym książkę */
 class IKsiazka
 {
 public:
+    friend class Library;
+    friend class User;
+
     /** @brief Konstruktor
     @param title tytuł książki
     @param author autor książki
@@ -16,6 +19,12 @@ public:
     IKsiazka(std::string title, std::string author, int id, std::string genere, int shelfId);
     /** Metoda wirtualna wyświetlająca informacje o książce */
     virtual void wyswietlInformacje() const;
+
+    /** Metoda dostepowa skladowej _title
+    @return zwraca wartosc skladowej _title
+    */
+    virtual std::string getTitle() const;
+
 
 protected:
     /** Składowa zawierająca tytuł książki */
@@ -29,9 +38,7 @@ protected:
     /** Składowa zawierająca informację o półce,
      *  na której znajduje się książka */
     int _shelfId;
+    /** Składowa zawierająca informację o tym,
+     *  czy ksiazka jest dostepna */
+    int _status;
 };
-// std::ostream &operator<<(std::ostream &stream, const Calculator &calc)
-// {
-//     stream << calc._value;
-//     return stream;
-// }
