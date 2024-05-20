@@ -1,6 +1,7 @@
 #pragma once 
 
-enum class Type {
+enum class Type
+{
     DIR,
     FILE
 };

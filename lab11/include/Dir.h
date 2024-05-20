@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string>
-#include <algorithm>
 #include "FSElement.h"
 
 /** klasa reprezentująca katalog w systemie plików */
@@ -56,14 +54,12 @@ public:
     /** destruktor */
     ~Dir();
 
-    /**
-    Przeladowany operator strumienia wyjscia
+    /** Przeladowany operator strumienia wyjscia
     @param ostream referencja do obiektu strumienia wyjscia
     @param dir const referencja obiektu typu Dir
     @return zwraca referencje do obiektu strumienia wyjscia
     */
     friend std::ostream &operator<<(std::ostream &stream, const Dir &dir);
-
 
 private:
     /** składowa zawierająca nazwę katalogu */
@@ -71,5 +67,4 @@ private:
 
     /** składowa zawierająca listę podkatalogów */
     std::vector<FSElement*> _subdirs;
-
 };

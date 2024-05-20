@@ -1,5 +1,4 @@
 #include "Dir.h"
-#include <iostream>
 
 Dir::Dir(std::string name) : _name(name) {};
 
@@ -15,20 +14,6 @@ void Dir::listDirs(int lvl) const
         std::cout << el->GetName() << " ";
     }
     std::cout << "\n";
-
-    // if (lvl == 0)
-    // {
-    //     return;
-    // }
-    
-    // for (FSElement* el : _subdirs)
-    // {
-    //     if (el->isDir()) {
-    //         if (lvl>=0) {
-    //             static_cast<Dir*>(el)->listDirs(lvl-1);
-    //         }
-    //     }
-    // }
 }
 
 void Dir::add(FSElement *el)

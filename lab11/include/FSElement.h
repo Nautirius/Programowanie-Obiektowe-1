@@ -32,8 +32,4 @@ public:
 
     /** wirtualny destruktor */
     virtual ~FSElement() = default;
-
-protected:
-    
 };
-

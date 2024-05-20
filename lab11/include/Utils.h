@@ -2,8 +2,6 @@
 
 #include "FSElement.h"
 #include "User.h"
-#include <thread>
-#include <mutex>
 #include <vector>
 
 /** funkcja szukajca asynchronicznie pliku 
@@ -19,4 +17,4 @@ std::vector<FSElement*> performAsyncUserSearch(const User *user, const std::stri
 * @param user uzytkownik dla ktorego wykonujemy przeszukiwanie
 * @return lista znalezionych wynikow
 */
-std::vector<FSElement*> searchFiles(const FSElement* element, const std::string& fileName, const User* user);
+std::vector<FSElement*> searchFiles(const FSElement *element, const std::string &fileName, const User *user);

@@ -1,6 +1,5 @@
 #pragma once
 
-// #include "FSElement.h"
 #include "Dir.h"
 
 /** klasa reprezetujaca uzytkownika */
@@ -24,9 +23,9 @@ public:
     Dir* GetHomedir() const;
 
 private:
-   /** składowa zawierająca nazwę uzytkownika */
+   /** składowa zawierająca nazwę użytkownika */
     std::string _name;
-    /** składowa zawierająca katalog domowy uzytkownika */
-    Dir *_homedir;
 
+    /** składowa zawierająca katalog domowy użytkownika */
+    Dir *_homedir;
 };

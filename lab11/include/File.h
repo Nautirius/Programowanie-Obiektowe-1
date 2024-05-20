@@ -1,6 +1,5 @@
 #pragma once
 
-#include <string>
 #include "FSElement.h"
 
 /** klasa reprezentująca plik w systemie plików */
@@ -28,8 +27,7 @@ public:
     /** destruktor */
     ~File() = default;
 
-    /**
-    Przeladowany operator strumienia wyjscia
+    /** Przeladowany operator strumienia wyjscia
     @param ostream referencja do obiektu strumienia wyjscia
     @param file const referencja obiektu typu File
     @return zwraca referencje do obiektu strumienia wyjscia

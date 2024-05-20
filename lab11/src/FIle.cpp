@@ -17,7 +17,7 @@ void File::print(int ind, std::ostream &stream) const
 bool File::isDir() const
 { return false; }
 
-std::ostream &operator<<(std::ostream &stream, const File &file)
+std::ostream& operator<<(std::ostream &stream, const File &file)
 {
     return stream << file._name;
 }

@@ -6,7 +6,7 @@
 #include "File.h"
 #include "Link.h"
 
-std::vector<FSElement*> searchFiles(const FSElement* element, const std::string& fileName, const User* user)
+std::vector<FSElement*> searchFiles(const FSElement *element, const std::string &fileName, const User *user)
 {
     std::vector<FSElement*> results;
     if (element->isDir())
@@ -28,7 +28,7 @@ std::vector<FSElement*> searchFiles(const FSElement* element, const std::string&
     return results;
 }
 
-std::vector<FSElement*> performAsyncUserSearch(const User* user, const std::string &fileName)
+std::vector<FSElement*> performAsyncUserSearch(const User *user, const std::string &fileName)
 {
     std::future<std::vector<FSElement*>> future = std::async(std::launch::async, searchFiles, user->GetHomedir(), fileName, user);
     return future.get();

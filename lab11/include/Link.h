@@ -1,6 +1,5 @@
 #pragma once
 
-#include <string>
 #include "FSElement.h"
 
 /** klasa reprezentująca symboliczny link w systemie plików */
@@ -29,8 +28,7 @@ public:
     /** destruktor */
     ~Link() = default;
 
-    /**
-    Przeladowany operator strumienia wyjscia
+    /** Przeladowany operator strumienia wyjscia
     @param ostream referencja do obiektu strumienia wyjscia
     @param file const referencja obiektu typu Link
     @return zwraca referencje do obiektu strumienia wyjscia
@@ -40,6 +38,7 @@ public:
 private:
     /** składowa zawierająca nazwę linku */
     std::string _name;
+
     /** składowa zawierająca cel linku */
     FSElement *_target;
 };
