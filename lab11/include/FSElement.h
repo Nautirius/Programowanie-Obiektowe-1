@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Type.h"
 
-/** klasa reprezentująca element systemu plików */
+/** klasa abstrakcyjna reprezentująca element systemu plików */
 class FSElement
 {
 public:
